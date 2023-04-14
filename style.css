@@ -40,7 +40,8 @@ body {
 }
 
 #toggel.active {
-    box-shadow: 0 0 0 78px #222237;
+    box-shadow: 0 0 0 78px rgba(0, 0, 0, 0.3);
+    ;
     background-color: #fff;
 }
 
