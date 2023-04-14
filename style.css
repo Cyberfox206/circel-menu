@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 30px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #222237, #fff);
+}
+
+#menu {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggel {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+#toggel.active {
+    box-shadow: 0 0 0 78px #222237;
+    background-color: #fff;
+}
+
+li {
+    position: absolute;
+    list-style: none;
+    left: 30px;
+    transform: rotate(calc(360deg/8 * var(--i))) translateX(20px);
+    transform-origin: 120px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#menu.active li {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(calc(360deg/-8 * var(--i)));
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#menu li a img {
+    width: 60%;
+}
